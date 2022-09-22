@@ -9,7 +9,7 @@
   
 - name: Service Details
   win_service:
-    name: "{{ item.name }}"
+    name: "{{ item }}"
     state: "{{ action }}"
   tags:
   - service
