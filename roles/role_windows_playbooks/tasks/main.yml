@@ -1,1 +1,8 @@
-
+- name: User Details
+  win_user:
+    name: "{{ username }}"
+    password: "{{ password }}"
+    state: "{{ action }}"
+    groups: "{{ groups }}"
+  tags: 
+  - user
