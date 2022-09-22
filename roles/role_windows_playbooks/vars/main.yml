@@ -1,1 +1,15 @@
+---
+#User
+with_items:
+    - { name: 'testuser1', groups: '', password: '' }
+    - { name: 'testuser2', groups: '', password: '' }
 
+# absent,present,query
+action: 
+
+#Service
+with_items:
+    - name: 'testuser1'
+
+#absent, paused, started, stopped, restarted
+action: 
