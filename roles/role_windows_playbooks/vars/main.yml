@@ -10,8 +10,8 @@ users:
  #   - Administrators
   #  - Remote Desktop Users
 
-pass: 
- - NRns@bOFJNyX
+#pass: 
+# - NRns@bOFJNyX
 #  - P@ssword@99
   
 # absent,present,query   #User state
