@@ -14,7 +14,7 @@
   win_user:
     name: "{{ users }}"
    # password: NRns@bOFJNyX
-    state: "{{ present }}"
+    state: "{{ state }}"
   when: result == "absent"
    # password: "{{ pass }}"
    # groups: "{{ groups }}"
