@@ -1,15 +1,21 @@
 ---
-#User
 with_items:
-    - { name: 'testuser1', groups: '', password: '' }
-    - { name: 'testuser2', groups: '', password: '' }
+    - { name: 'testuser1' }
+    - { name: 'testuser2' }
+    
+groups:
+    - { '' }
+    - { '' }
 
-# absent,present,query
+password:
+    - { '' }
+    - { '' }
+   
+# absent,present,query   #User actions
+#absent, paused, started, stopped, restarted   #Service actions
 action: 
 
-#Service
-with_items:
-    - name: 'testuser1'
 
-#absent, paused, started, stopped, restarted
-action: 
+
+
+
