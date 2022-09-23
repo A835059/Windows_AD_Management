@@ -4,7 +4,7 @@
     password: "{{ item.password }}"
    # groups: "{{ groups }}"
    # state: "{{ action }}"
-  with_items: "{{ user_details }}"
+#  with_items: "{{ user_details }}"
  # with_items: "{{ pass }}"
  # tags: 
  # - user
