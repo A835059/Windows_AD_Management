@@ -1,11 +1,11 @@
 ---
 name:
-    - { 'testuser1' }
-    - { 'testuser2' }
+    - testuser1
+    - testuser2
     
 groups:
-    - { 'Administrators' }
-    - { 'Remote Desktop Users' }
+    - Administrators
+    - Remote Desktop Users
 
 password:
     - { '' }
