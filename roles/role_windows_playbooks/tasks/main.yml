@@ -1,5 +1,5 @@
 - name: Check user Admin present or not
-  win_domain_user:
+  win_user:
     name: "{{ users }}"
     state: query
   register: check_result
@@ -11,7 +11,7 @@
     result: "{{ check_result.state  }}"
 
 - name : Create user Admin if not present
-  win_domain_user:
+  win_user:
     name: "{{ users }}"
    # password: NRns@bOFJNyX
     state: "{{ state }}"
