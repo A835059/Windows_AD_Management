@@ -1,15 +1,18 @@
 ---
-users:
-    - username: 'testuser_2022'
-    - username: 'testuser_2021'
+with_items:
+    - user_details: '{ username: 'testuser_2022', password: 'P@ssword@123' }'
+    - user_details: '{ username: 'testuser_2021', password: 'P@ssword@99' }'
+#users:
+ #   - username: 'testuser_2022'
+  #  - username: 'testuser_2021'
     
 #groups:
  #   - Administrators
   #  - Remote Desktop Users
 
-pass:
-   - password: 'P@ssword@123'
-   - password: 'P@ssword@99'
+#pass:
+ #  - password: 'P@ssword@123'
+  # - password: 'P@ssword@99'
   
 # absent,present,query   #User actions
 #absent, paused, started, stopped, restarted   #Service actions
