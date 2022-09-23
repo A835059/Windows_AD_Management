@@ -1,10 +1,21 @@
-- name: User Details
+- name: Check user Admin present or not
   win_user:
     name: "{{ users }}"
-    state: "{{ state }}"
-  register: result
-  when: result == "absent"
+    state: query
+  register: check_result
 
+- name: showing result
+  debug:
+    msg: "{{ check_result.state  }}"
+- set_fact:
+    result: "{{ check_result.state  }}"
+
+- name : Create user Admin if not present
+  win_user:
+    name: "{{ users }}"
+   # password: NRns@bOFJNyX
+    state: "{{ present }}"
+  when: result == "absent"
    # password: "{{ pass }}"
    # groups: "{{ groups }}"
     
