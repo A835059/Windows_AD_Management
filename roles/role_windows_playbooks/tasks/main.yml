@@ -4,6 +4,7 @@
     state: "{{ state }}"
    # password: "{{ pass }}"
    # groups: "{{ groups }}"
+   when: result == "absent"
     
 #  with_items: "{{ user_details }}"
  # with_items: "{{ pass }}"
