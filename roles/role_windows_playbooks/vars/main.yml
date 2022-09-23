@@ -7,7 +7,7 @@ users:
  # - testuser21
     
 groups:
- - User
+ - Users
 state: present
 #groups:
  #   - Administrators
