@@ -1,18 +1,14 @@
 ---
-loop:
-    - {username: 'testuser_2022', password: 'P@ssword@123'}
-    - { username: 'testuser_2021', password: 'P@ssword@99' }
-#users:
- #   - username: 'testuser_2022'
-  #  - username: 'testuser_2021'
+#loop:
+ #   - {username: 'testuser_2022', password: 'P@ssword@123'}
+  #  - { username: 'testuser_2021', password: 'P@ssword@99' }
+users: 'testuser_2022', 'testuser_2021'
     
 #groups:
  #   - Administrators
   #  - Remote Desktop Users
 
-#pass:
- #  - password: 'P@ssword@123'
-  # - password: 'P@ssword@99'
+pass: 'P@ssword@123', 'P@ssword@99'
   
 # absent,present,query   #User actions
 #absent, paused, started, stopped, restarted   #Service actions
