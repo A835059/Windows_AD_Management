@@ -6,8 +6,8 @@ users:
  - Testwin
  # - testuser21
     
-groups:
- - [ 'Users' ]
+#groups:
+ #- [ 'Users' ]
 # - ESOLAB.LOCAL/Users
  
 state: present
