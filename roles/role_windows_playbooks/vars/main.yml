@@ -7,7 +7,7 @@ users:
  # - testuser21
     
 groups:
- - "{{ Domain Users }}"
+ - "{{ Users }}"
 # - ESOLAB.LOCAL/Users
  
 state: present
