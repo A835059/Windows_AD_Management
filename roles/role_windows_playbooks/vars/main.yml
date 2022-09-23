@@ -7,10 +7,10 @@ users:
  #   - Administrators
   #  - Remote Desktop Users
 
-#password:
- #   - { '' }
-  #  - { '' }
-   
+pass:
+   - password: 'P@ssword@123'
+   - password: 'P@ssword@99'
+  
 # absent,present,query   #User actions
 #absent, paused, started, stopped, restarted   #Service actions
 action: present
