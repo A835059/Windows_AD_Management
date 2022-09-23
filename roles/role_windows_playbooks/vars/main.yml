@@ -3,9 +3,10 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 users: 
- - TestWindows
+ - Test
  # - testuser21
     
+state: present
 #groups:
  #   - Administrators
   #  - Remote Desktop Users
@@ -15,7 +16,7 @@ users:
 #  - P@ssword@99
   
 # absent,present,query   #User state
-state: present
+
 #absent, paused, started, stopped, restarted   #Service actions
 #action: present
 
