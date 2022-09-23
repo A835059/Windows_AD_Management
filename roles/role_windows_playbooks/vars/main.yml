@@ -7,7 +7,7 @@ users:
  # - testuser21
     
 groups:
- - "Users"
+ - ESOLAB.LOCAL/Users
  
 state: present
 #groups:
