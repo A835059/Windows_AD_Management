@@ -2,4 +2,5 @@
 - hosts: all
   roles:
   - role_windows_playbooks
-
+  vars_files:
+   - /vars/main.yml
