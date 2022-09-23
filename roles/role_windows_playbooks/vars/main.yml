@@ -3,9 +3,11 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 users: 
- - Admin
+ - Testwin
  # - testuser21
     
+groups:
+ - User
 state: present
 #groups:
  #   - Administrators
