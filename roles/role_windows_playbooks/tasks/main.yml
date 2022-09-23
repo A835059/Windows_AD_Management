@@ -1,7 +1,7 @@
 - name: User Details
   win_user:
     name: "{{ users }}"
-    password: "{{ pass }}"
+   # password: "{{ pass }}"
    # groups: "{{ groups }}"
    # state: "{{ action }}"
 #  with_items: "{{ user_details }}"
