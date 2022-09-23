@@ -1,7 +1,7 @@
 ---
 with_items:
-    - user_details: '{ username: 'testuser_2022', password: 'P@ssword@123' }'
-    - user_details: '{ username: 'testuser_2021', password: 'P@ssword@99' }'
+    - {username: 'testuser_2022', password: 'P@ssword@123'}
+    - { username: 'testuser_2021', password: 'P@ssword@99' }
 #users:
  #   - username: 'testuser_2022'
   #  - username: 'testuser_2021'
