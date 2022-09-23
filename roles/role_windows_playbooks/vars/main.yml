@@ -6,7 +6,7 @@ users:
  - Test
  # - testuser21
     
-state: present
+state: query
 #groups:
  #   - Administrators
   #  - Remote Desktop Users
