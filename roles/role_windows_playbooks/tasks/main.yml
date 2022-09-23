@@ -3,7 +3,7 @@
     name: "{{ users }}"
    # password: "{{ pass }}"
    # groups: "{{ groups }}"
-   # state: "{{ action }}"
+    state: "{{ state }}"
 #  with_items: "{{ user_details }}"
  # with_items: "{{ pass }}"
  # tags: 
