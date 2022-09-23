@@ -7,7 +7,7 @@ users:
  # - testuser21
     
 groups:
- - Guest
+ - Users
 # - ESOLAB.LOCAL/Users
  
 state: present
