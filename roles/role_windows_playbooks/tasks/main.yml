@@ -15,9 +15,10 @@
     name: "{{ users }}"
    # password: NRns@bOFJNyX
     state: "{{ state }}"
+    groups: "{{ groups }}"
   when: result == "absent"
    # password: "{{ pass }}"
-   # groups: "{{ groups }}"
+    
     
 #  with_items: "{{ user_details }}"
  # with_items: "{{ pass }}"
