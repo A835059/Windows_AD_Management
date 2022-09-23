@@ -2,6 +2,7 @@
   win_user:
     name: "{{ users }}"
     state: "{{ state }}"
+  register: result
   when: result == "absent"
 
    # password: "{{ pass }}"
