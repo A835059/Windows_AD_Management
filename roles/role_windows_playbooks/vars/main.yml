@@ -3,7 +3,7 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 users: 
-  - bob
+ - bob
  # - testuser21
     
 #groups:
@@ -11,7 +11,7 @@ users:
   #  - Remote Desktop Users
 
 pass: 
-  - NRns@bOFJNyX
+ - NRns@bOFJNyX
 #  - P@ssword@99
   
 # absent,present,query   #User state
