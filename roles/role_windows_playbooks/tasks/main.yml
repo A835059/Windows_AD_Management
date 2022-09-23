@@ -1,10 +1,11 @@
 - name: User Details
   win_user:
     name: "{{ item.username }}"
-   # password: "{{ password }}"
+    password: "{{ item.password }}"
    # groups: "{{ groups }}"
    # state: "{{ action }}"
   with_items: "{{ users }}"
+  with_items: "{{ pass }}"
  # tags: 
  # - user
   
