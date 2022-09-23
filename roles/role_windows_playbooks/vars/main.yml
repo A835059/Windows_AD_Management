@@ -1,7 +1,7 @@
 ---
 with_items:
-    - { name: 'testuser1' }
-    - { name: 'testuser2' }
+    - { 'testuser1' }
+    - { 'testuser2' }
     
 groups:
     - { '' }
