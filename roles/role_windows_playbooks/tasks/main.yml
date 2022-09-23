@@ -1,6 +1,6 @@
 - name: User Details
   win_user:
-    name: "{{ item }}"
+    name: "{{ name }}"
     password: "{{ password }}"
     groups: "{{ groups }}"
     state: "{{ action }}"
@@ -9,7 +9,7 @@
   
 - name: Service Details
   win_service:
-    name: "{{ item }}"
+    name: "{{ name }}"
     state: "{{ action }}"
   tags:
   - service
