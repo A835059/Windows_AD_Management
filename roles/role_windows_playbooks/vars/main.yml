@@ -1,5 +1,5 @@
 ---
-with_items:
+name:
     - { 'testuser1' }
     - { 'testuser2' }
     
