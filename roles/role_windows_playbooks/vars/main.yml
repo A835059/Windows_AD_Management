@@ -3,19 +3,19 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 users: 
-  - testuser22
-  - testuser21
+  - bob
+ # - testuser21
     
 #groups:
  #   - Administrators
   #  - Remote Desktop Users
 
 pass: 
-  - P@ssword@123
-  - P@ssword@99
+  - NRns@bOFJNyX
+#  - P@ssword@99
   
 # absent,present,query   #User state
-state: present
+state: absent
 #absent, paused, started, stopped, restarted   #Service actions
 #action: present
 
