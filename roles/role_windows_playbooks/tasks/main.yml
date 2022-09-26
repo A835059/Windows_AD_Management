@@ -1,15 +1,15 @@
 ---
 - name: Ensure user bob is present
   win_domain_user:
-    name: bob
-    firstname: Bob
-    surname: Smith
-    company: BobCo
+    name: TestWin
+   # firstname: Bob
+   # surname: Smith
+   # company: BobCo
     password: NRns@bOFJNyX
     state: present
     groups:
-      - GuestUsers
-     # - Domain Admins
+     # - GuestUsers
+      - Domain Admins
   
 #- name : User Details
  # win_user:
