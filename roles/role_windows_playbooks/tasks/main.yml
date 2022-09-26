@@ -1,10 +1,17 @@
 ---
-- name : User Details
+- name: Ensure user bob is present
   win_user:
-    name: "{{ users }}"
-    state: "{{ state }}"
-    groups: "{{ groups }}"
-    password: "{{ pass }}"
+    name: bob
+    password: B0bP4ssw0rd
+    state: present
+    groups:
+      - DnsAdmins
+#- name : User Details
+ # win_user:
+  #  name: "{{ users }}"
+   # state: "{{ state }}"
+    #groups: "{{ groups }}"
+    #password: "{{ pass }}"
  # tags: 
   #- user
     
