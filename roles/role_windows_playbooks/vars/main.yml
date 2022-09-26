@@ -13,6 +13,7 @@ state: present
 
 groups:
  - DnsAdmins
+ - Domain Admins
 
 
 pass: 
