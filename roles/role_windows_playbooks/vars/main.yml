@@ -2,22 +2,23 @@
 #loop:
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
-users: 
-  - Testwin
+
+#users: 
+ # - Testwin
  # - testuser21
    
    
 # absent,present,query   #User state
-state: present
+#state: present
 
 
-groups:
-  - DnsAdmins
-  - Domain Admins
+#groups:
+ # - DnsAdmins
+  #- Domain Admins
 
 
-pass: 
-  - NRns@bOFJNyX
+#pass: 
+ # - NRns@bOFJNyX
 # - P@ssword@99
   
 
