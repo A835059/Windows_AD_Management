@@ -1,22 +1,10 @@
 ---
-- name: Ensure user bob is present
+- name : User Details
   win_domain_user:
-    name: TestWin
-   # firstname: Bob
-   # surname: Smith
-   # company: BobCo
-    password: NRns@bOFJNyX
-    state: present
-    groups:
-     # - GuestUsers
-      - Domain Admins
-  
-#- name : User Details
- # win_user:
-  #  name: "{{ users }}"
-   # state: "{{ state }}"
-    #groups: "{{ groups }}"
-    #password: "{{ pass }}"
+    name: "{{ users }}"
+    state: "{{ state }}"
+    groups: "{{ groups }}"
+    password: "{{ pass }}"
  # tags: 
   #- user
     
