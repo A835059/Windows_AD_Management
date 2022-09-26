@@ -8,7 +8,7 @@ user_names:
 #group_names: 
  #   - Domain Guests
    
-#pass: NRns@bOFJNyX
+pass: NRns@bOFJNyX
 
 user_action: present
 
