@@ -1,7 +1,7 @@
 ---
 
 # absent,present,query   #User state
-user_details:
+user_names:
     - testuser2022
     - testuser2021
 
