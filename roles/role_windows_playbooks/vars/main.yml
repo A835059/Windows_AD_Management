@@ -17,7 +17,7 @@ user_action: present
 #absent, paused, started, stopped, restarted   #Service actions
 service_names:
     - Netlogon
-    - Network List Service
+   # - WinRM
 
 service_action: paused
     
