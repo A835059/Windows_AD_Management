@@ -5,13 +5,12 @@ user_names:
     - testuser2022
     - testuser2021
 
-group_names: 
-    - Domain Guests
+#group_names: 
+ #   - Domain Guests
    
-pass: NRns@bOFJNyX
+#pass: NRns@bOFJNyX
 
 user_action: present
-
 
 
 #absent, paused, started, stopped, restarted   #Service actions
