@@ -19,7 +19,7 @@ service_names:
     - Netlogon
     - spooler
 
-service_action: paused
+service_action: started
     
 
 
