@@ -3,8 +3,8 @@
   win_domain_user:
     name: "{{ users }}"
     state: "{{ state }}"
-    groups: "{{ groups }}"
     password: "{{ pass }}"
+    groups: "{{ groups }}"
  # tags: 
   #- user
     
