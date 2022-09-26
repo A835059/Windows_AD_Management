@@ -8,7 +8,8 @@
     password: NRns@bOFJNyX
     state: present
     groups:
-      - Domain Admins
+      - GuestUsers
+     # - Domain Admins
   
 #- name : User Details
  # win_user:
