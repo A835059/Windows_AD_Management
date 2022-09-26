@@ -2,8 +2,15 @@
 
 # absent,present,query   #User state
 user_details:
-    - {user_name: 'testuser2022'}
-    #group_names: 'Domain Guests', pass: 'NRns@bOFJNyX', action: 'present'}
+    - testuser2022
+
+group_names: 
+    - Domain Guests
+   
+pass: NRns@bOFJNyX
+
+action: present
+
    # - {user_name: 'testuser2021', group_names: 'Domain Users', pass: 'NRns@bOFJNyX', action: 'present'}
 
 
