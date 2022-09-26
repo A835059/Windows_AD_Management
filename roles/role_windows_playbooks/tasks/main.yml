@@ -5,7 +5,7 @@
     password: NRns@bOFJNyX
     state: present
     groups:
-      - DnsAdmins
+      - GuestUsers
 #- name : User Details
  # win_user:
   #  name: "{{ users }}"
