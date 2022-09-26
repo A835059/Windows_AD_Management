@@ -12,7 +12,7 @@ users:
 state: present
 
 
-groups:
+group_names:
  # - GuestUsers
   - Domain Admins
 
