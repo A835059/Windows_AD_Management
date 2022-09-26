@@ -12,8 +12,8 @@
  
 - name: Service Details
   win_service:
-    name: "{{ item.user_name }}"
-    state: "{{ item.action }}"
-  with_items: "{{ service_details }}"
+    name: "{{ service_names }}"
+    state: "{{ action }}"
+ # with_items: "{{ service_details }}"
   tags:
   - service
