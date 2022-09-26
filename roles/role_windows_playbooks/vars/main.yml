@@ -1,9 +1,10 @@
 ---
-#with_items:
- #   - {user_name: 'testuser2022', group_names: 'Domain Admins', pass: 'NRns@bOFJNyX'}
+user_details:
+    - {user_name: 'testuser2022', group_names: 'Domain Guests', pass: 'NRns@bOFJNyX'}
+    - {user_name: 'testuser2021', group_names: 'Domain Users', pass: 'NRns@bOFJNyX'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
-user_name: "TestWin,Guest"
+#user_name: "TestWin,Guest"
   
  # - testuser21
    
@@ -12,13 +13,13 @@ user_name: "TestWin,Guest"
 action: present
 
 
-group_names:
+#group_names:
  # - GuestUsers
-  - Domain Admins
+ # - Domain Admins
 
 
-pass: 
-  - NRns@bOFJNyX
+#pass: 
+ # - NRns@bOFJNyX
 # - P@ssword@99
   
 
