@@ -1,8 +1,8 @@
 ---
 - name : User Details
   win_domain_user:
-    name: "{{ name }}"
-    state: "{{ state }}"
+    name: "{{ user_name }}"
+    state: "{{ action }}"
     password: "{{ pass }}"
     groups: "{{ group_names }}"
  # tags: 
