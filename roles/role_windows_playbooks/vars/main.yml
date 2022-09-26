@@ -3,6 +3,7 @@
 # absent,present,query   #User state
 user_details:
     - testuser2022
+    - testuser2021
 
 group_names: 
     - Domain Guests
@@ -11,13 +12,14 @@ pass: NRns@bOFJNyX
 
 action: present
 
-   # - {user_name: 'testuser2021', group_names: 'Domain Users', pass: 'NRns@bOFJNyX', action: 'present'}
 
 
 #absent, paused, started, stopped, restarted   #Service actions
-service_details:
-    - {user_name: 'Netlogon', action: 'paused'}
-    - {user_name: 'Netlogon', action: 'started'}
+service_names:
+    - Netlogon
+    - WinRM
 
+action: paused
+    
 
 
