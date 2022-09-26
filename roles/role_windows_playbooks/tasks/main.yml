@@ -2,7 +2,7 @@
 - name : User Details
   win_domain_user:
     name: "{{ item }}"
-    state: "{{ action }}"
+    state: "{{ user_action }}"
     password: "{{ pass }}"
     groups: "{{ group_names }}"
   with_items: "{{ user_details }}"
@@ -13,7 +13,7 @@
 - name: Service Details
   win_service:
     name: "{{ service_names }}"
-    state: "{{ action }}"
+    state: "{{ service_action }}"
  # with_items: "{{ service_details }}"
   tags:
   - service
