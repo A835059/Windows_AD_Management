@@ -1,9 +1,10 @@
 ---
-#loop:
- #   - {username: 'testuser_2022', password: 'P@ssword@123'}
+with_items:
+    - {user_name: 'testuser2022', group_names: 'Domain Admins', pass: 'NRns@bOFJNyX'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
-user_name: TestWin
+#user_name: TestWin
+  
  # - testuser21
    
    
@@ -11,13 +12,13 @@ user_name: TestWin
 action: present
 
 
-group_names:
+#group_names:
  # - GuestUsers
-  - Domain Admins
+ # - Domain Admins
 
 
-pass: 
-  - NRns@bOFJNyX
+#pass: 
+ # - NRns@bOFJNyX
 # - P@ssword@99
   
 
