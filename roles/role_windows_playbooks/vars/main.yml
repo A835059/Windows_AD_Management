@@ -9,7 +9,7 @@ user_name:
    
    
 # absent,present,query   #User state
-action: absent
+action: present
 
 
 group_names:
