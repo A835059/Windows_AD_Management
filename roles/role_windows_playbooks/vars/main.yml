@@ -3,7 +3,7 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 users: 
- - Testwin
+  - Testwin
  # - testuser21
    
    
@@ -12,12 +12,12 @@ state: present
 
 
 groups:
- - DnsAdmins
- - Domain Admins
+  - DnsAdmins
+  - Domain Admins
 
 
 pass: 
- - NRns@bOFJNyX
+  - NRns@bOFJNyX
 # - P@ssword@99
   
 
