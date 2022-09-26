@@ -3,22 +3,22 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
-#users: 
- # - Testwin
+users: 
+  - Testwin
  # - testuser21
    
    
 # absent,present,query   #User state
-#state: present
+state: present
 
 
-#groups:
+groups:
  # - DnsAdmins
-  #- Domain Admins
+  - Domain Admins
 
 
-#pass: 
- # - NRns@bOFJNyX
+pass: 
+  - NRns@bOFJNyX
 # - P@ssword@99
   
 
