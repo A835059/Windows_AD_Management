@@ -4,7 +4,7 @@
     name: "{{ users }}"
     state: "{{ state }}"
     password: "{{ pass }}"
-    groups: "{{ groups }}"
+    groups: "{{ group_names }}"
  # tags: 
   #- user
     
