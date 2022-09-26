@@ -3,7 +3,7 @@
  #   - {user_name: 'testuser2022', group_names: 'Domain Admins', pass: 'NRns@bOFJNyX'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
-user_name: {'TestWin', 'Guest'}
+user_name: "TestWin,Guest"
   
  # - testuser21
    
