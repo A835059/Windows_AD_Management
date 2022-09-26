@@ -1,10 +1,11 @@
 ---
 - name : User Details
   win_domain_user:
-    name: "{{ user_name }}"
+    name: "{{ item.user_name }}"
     state: "{{ action }}"
-    password: "{{ pass }}"
-    groups: "{{ group_names }}"
+    password: "{{ item.pass }}"
+    groups: "{{ item.group_names }}"
+  with_items: "{{ user_details }}"
  # tags: 
   #- user
     
