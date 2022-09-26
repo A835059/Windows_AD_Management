@@ -6,25 +6,18 @@ users:
  - Testwin
  # - testuser21
     
-#groups:
- #- [ 'Users' ]
-# - ESOLAB.LOCAL/Users
+groups:
+ - Users
  
-state: present
-#groups:
- #   - Administrators
-  #  - Remote Desktop Users
-
-#pass: 
-# - NRns@bOFJNyX
-#  - P@ssword@99
-  
+ 
 # absent,present,query   #User state
+state: present
+
+
+pass: 
+ - NRns@bOFJNyX
+ - P@ssword@99
+  
 
 #absent, paused, started, stopped, restarted   #Service actions
-#action: present
-
-
-
-
-
+#state: started
