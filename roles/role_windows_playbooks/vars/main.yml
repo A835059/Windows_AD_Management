@@ -5,18 +5,19 @@
 users: 
  - Testwin
  # - testuser21
-    
-groups:
- - Users
- 
- 
+   
+   
 # absent,present,query   #User state
 state: present
 
 
+groups:
+ - DnsAdmins
+
+
 pass: 
  - NRns@bOFJNyX
- - P@ssword@99
+# - P@ssword@99
   
 
 #absent, paused, started, stopped, restarted   #Service actions
