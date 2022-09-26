@@ -5,15 +5,15 @@
     state: "{{ user_action }}"
     password: "{{ pass }}"
     groups: "{{ group_names }}"
-  with_items: "{{ user_details }}"
+  with_items: "{{ user_names }}"
   tags: 
   - user
     
  
 - name: Service Details
   win_service:
-    name: "{{ service_names }}"
+    name: "{{ item }}"
     state: "{{ service_action }}"
- # with_items: "{{ service_details }}"
+  with_items: "{{ service_names }}"
   tags:
   - service
