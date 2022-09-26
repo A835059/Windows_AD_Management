@@ -5,6 +5,7 @@
     state: "{{ user_action }}"
     password: "{{ pass }}"
     groups: "{{ group_names }}"
+    password_expired: yes       #will require the user to change their password at next login
   with_items: "{{ user_names }}"
   tags: 
   - user
