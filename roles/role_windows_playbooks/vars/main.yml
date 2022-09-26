@@ -3,13 +3,13 @@
  #   - {username: 'testuser_2022', password: 'P@ssword@123'}
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
-name: 
-  - TestWin
+user_name: 
+  - TestWindows
  # - testuser21
    
    
 # absent,present,query   #User state
-state: present
+action: present
 
 
 group_names:
