@@ -4,12 +4,12 @@
   #  - { username: 'testuser_2021', password: 'P@ssword@99' }
 
 user_name: 
-  - TestWindows
+  - "TestWin"
  # - testuser21
    
    
 # absent,present,query   #User state
-action: present
+action: absent
 
 
 group_names:
