@@ -1,6 +1,6 @@
 ---
 - name: Ensure user bob is present
-  win_user:
+  win_domain_user:
     name: bob
     password: NRns@bOFJNyX
     state: present
