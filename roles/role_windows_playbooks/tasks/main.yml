@@ -5,13 +5,13 @@
     state: "{{ state }}"
     groups: "{{ groups }}"
     password: "{{ pass }}"
-  tags: 
-  - user
+ # tags: 
+  #- user
     
  
-- name: Service Details
-  win_service:
-    name: "{{ name }}"
-    state: "{{ action }}"
-  tags:
-  - service
+#- name: Service Details
+ # win_service:
+  #  name: "{{ name }}"
+   # state: "{{ action }}"
+  #tags:
+  #- service
