@@ -10,7 +10,7 @@ group_names:
    
 pass: NRns@bOFJNyX
 
-action: present
+user_action: present
 
 
 
@@ -19,7 +19,7 @@ service_names:
     - Netlogon
     - WinRM
 
-action: paused
+service_action: paused
     
 
 
