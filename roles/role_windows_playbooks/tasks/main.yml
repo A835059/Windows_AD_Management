@@ -1,7 +1,7 @@
 ---
 - name : User Details
   win_domain_user:
-    name: "{{ users }}"
+    name: "{{ name }}"
     state: "{{ state }}"
     password: "{{ pass }}"
     groups: "{{ group_names }}"
