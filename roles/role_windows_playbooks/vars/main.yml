@@ -24,11 +24,11 @@ user_action: present
 
 
 #absent, paused, started, stopped, restarted   #Service actions
-service_names:
-    - Netlogon
+#service_names:
+ #   - Netlogon
    # - WinRM
 
-service_action: paused
+#service_action: paused
     
 
 
