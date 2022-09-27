@@ -6,8 +6,8 @@
     surname: "{{ item.last_names }}"
     password: "{{ pass }}"
     state: "{{ user_action }}"
-   # groups: "{{ group_names }}"
-    #password_expired: yes       #will require the user to change their password at next login
+    groups: "{{ group_names }}"
+    password_expired: yes       #will require the user to change their password at next login
   with_items: "{{ user_names }}"
   with_items: "{{ first_names }}"
   with_items: "{{ last_names }}"
@@ -15,10 +15,10 @@
   - user
     
  
-- name: Service Details
-  win_service:
-    name: "{{ item }}"
-    state: "{{ service_action }}"
-  with_items: "{{ service_names }}"
-  tags:
-  - service
+#- name: Service Details
+ # win_service:
+  #  name: "{{ item }}"
+   # state: "{{ service_action }}"
+  #with_items: "{{ service_names }}"
+  #tags:
+  #- service
