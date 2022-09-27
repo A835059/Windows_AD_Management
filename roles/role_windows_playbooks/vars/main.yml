@@ -5,6 +5,16 @@ user_names:
     - testuser2022
     - testuser2021
 
+
+first_names:
+    - Bob
+    - Smith
+    
+last_names:
+    - Smith
+    - John
+
+
 group_names: 
     - Domain Guests
    
