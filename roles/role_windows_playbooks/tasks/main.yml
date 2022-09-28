@@ -1,23 +1,69 @@
 ---
-- name : User Details
+- name: User Details
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    #password: "{{ pass }}"
+    state: "{{ user_action }}"
+    #groups: "{{ group_names }}"
+    #password_expired: yes       #will require the user to change their password at next login
+  with_items: 
+  - "{{ user_names }}"
+  tags: 
+  - user
+    
+    
+ - name: Domain Details
+   win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    password: "{{ pass }}"
+    state: "{{ user_action }}"
+    domain_username: "{{ domain_username }}"
+    #domain_password: SomePas2w0rd
+    domain_server: "{{ domain_server }}"
+    path: "{{ path }}"
+   with_items: 
+  - "{{ user_names }}"
+  tags: 
+  - domain
+  
+
+- name: User Details
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    #password: "{{ pass }}"
+    state: "{{ user_action }}"
+    groups: "{{ group_names }}"
+    #password_expired: yes       #will require the user to change their password at next login
+  with_items: 
+  - "{{ user_names }}"
+  tags: 
+  - group
+  
+  
+- name: User Details
   win_domain_user:
     name: "{{ item.login_name }}"
     firstname: "{{ item.first_name }}"
     surname: "{{ item.last_name }}"
     password: "{{ pass }}"
     state: "{{ user_action }}"
-    groups: "{{ group_names }}"
+    #groups: "{{ group_names }}"
     password_expired: yes       #will require the user to change their password at next login
   with_items: 
   - "{{ user_names }}"
   tags: 
-  - user
-    
- 
-#- name: Service Details
- # win_service:
-  #  name: "{{ item }}"
-   # state: "{{ service_action }}"
-  #with_items: "{{ service_names }}"
-  #tags:
-  #- service
+  - password
+  
+- name: Service Details
+  win_service:
+    name: "{{ item }}"
+    state: "{{ service_action }}"
+  with_items: "{{ service_names }}"
+  tags:
+  - service
