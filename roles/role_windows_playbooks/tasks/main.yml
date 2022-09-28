@@ -22,7 +22,7 @@
    password: "{{ pass }}"
    state: "{{ user_action }}"
    domain_username: "{{ domain_username }}"
-    #domain_password: SomePas2w0rd
+   domain_password: "{{ domain_password }}"
    domain_server: "{{ domain_server }}"
    path: "{{ path }}"
   with_items: 
