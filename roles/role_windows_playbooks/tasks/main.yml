@@ -14,24 +14,24 @@
   - user
     
     
- - name: Domain Details
-   win_domain_user:
-    name: "{{ item.login_name }}"
-    firstname: "{{ item.first_name }}"
-    surname: "{{ item.last_name }}"
-    password: "{{ pass }}"
-    state: "{{ user_action }}"
-    domain_username: "{{ domain_username }}"
+- name: Domain Details
+  win_domain_user:
+   name: "{{ item.login_name }}"
+   firstname: "{{ item.first_name }}"
+   surname: "{{ item.last_name }}"
+   password: "{{ pass }}"
+   state: "{{ user_action }}"
+   domain_username: "{{ domain_username }}"
     #domain_password: SomePas2w0rd
-    domain_server: "{{ domain_server }}"
-    path: "{{ path }}"
-   with_items: 
+   domain_server: "{{ domain_server }}"
+   path: "{{ path }}"
+  with_items: 
   - "{{ user_names }}"
   tags: 
   - domain
   
-
-- name: User Details
+  
+- name: Group Details
   win_domain_user:
     name: "{{ item.login_name }}"
     firstname: "{{ item.first_name }}"
@@ -45,8 +45,7 @@
   tags: 
   - group
   
-  
-- name: User Details
+- name: Password Details
   win_domain_user:
     name: "{{ item.login_name }}"
     firstname: "{{ item.first_name }}"
