@@ -2,17 +2,14 @@
 
 # absent,present,query   #User state
 user_names:
-    - testuser2022
-    - testuser2021
-
-
-first_names:
-    - Bob
-    - Vic
+    - login_name: testuser2022 
+      first_name: Bob
+      last_name: John
     
-last_names:
-    - Smith
-    - John
+    - login_name: testuser2021 
+      first_name: Vic
+      last_name: Smith
+
 
 
 group_names: 
