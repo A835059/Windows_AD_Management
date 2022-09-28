@@ -1,17 +1,15 @@
 ---
 - name : User Details
   win_domain_user:
-    name: "{{ item.0 }}"
-    firstname: "{{ item.1 }}"
-    surname: "{{ item.2 }}"
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
     password: "{{ pass }}"
     state: "{{ user_action }}"
     groups: "{{ group_names }}"
     password_expired: yes       #will require the user to change their password at next login
-  with_nested: 
+  with_items: 
   - "{{ user_names }}"
-  - "{{ first_names }}"
-  - "{{ last_names }}"
   tags: 
   - user
     
