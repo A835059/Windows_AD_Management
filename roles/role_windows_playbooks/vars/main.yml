@@ -22,6 +22,8 @@ domain_username: DOMAIN\admin-account
 
 domain_server: domain@DOMAIN.COM
 
+domain_password: SomePas2w0rd
+
 path: ou=test,dc=domain,dc=local
 
 
