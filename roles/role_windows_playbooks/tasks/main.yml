@@ -1,9 +1,9 @@
 ---
 - name : User Details
   win_domain_user:
-    name: "{{ item[0] }}"
-    firstname: "{{ item[1] }}"
-    surname: "{{ item[2] }}"
+    name: "{{ item.0 }}"
+    firstname: "{{ item.1 }}"
+    surname: "{{ item.2 }}"
     password: "{{ pass }}"
     state: "{{ user_action }}"
     groups: "{{ group_names }}"
