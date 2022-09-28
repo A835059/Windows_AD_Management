@@ -20,7 +20,7 @@ user_action: present
 
 domain_username: DOMAIN\admin-account
 
-domain_server: domain@DOMAIN.COM
+domain_server: 192.168.90.94
 
 domain_password: SomePas2w0rd
 
