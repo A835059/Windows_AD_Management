@@ -9,9 +9,9 @@
     groups: "{{ group_names }}"
     password_expired: yes       #will require the user to change their password at next login
   with_nested: 
-  - ['user_names']
-  - ['first_names']
-  - ['last_names']
+  - "{{ user_names }}"
+  - "{{ first_names }}"
+  - "{{ last_names }}"
   tags: 
   - user
     
