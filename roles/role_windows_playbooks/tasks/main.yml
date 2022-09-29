@@ -24,7 +24,7 @@
    domain_username: "{{ domain_username }}"
    domain_password: "{{ domain_password }}"
    domain_server: "{{ domain_server }}"
-   #path: "{{ path }}"
+   path: "{{ path }}"
   with_items: 
   - "{{ user_names }}"
   tags: 
