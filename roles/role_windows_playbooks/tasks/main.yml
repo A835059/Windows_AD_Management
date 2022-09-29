@@ -1,17 +1,17 @@
 ---
-- name: User Details
-  win_domain_user:
-    name: "{{ item.login_name }}"
-    firstname: "{{ item.first_name }}"
-    surname: "{{ item.last_name }}"
+#- name: User Details
+ # win_domain_user:
+  #  name: "{{ item.login_name }}"
+   # firstname: "{{ item.first_name }}"
+    #surname: "{{ item.last_name }}"
     #password: "{{ pass }}"
-    state: "{{ user_action }}"
+  #  state: "{{ user_action }}"
     #groups: "{{ group_names }}"
     #password_expired: yes       #will require the user to change their password at next login
-  with_items: 
-  - "{{ user_names }}"
-  tags: 
-  - user
+#  with_items: 
+ # - "{{ user_names }}"
+#  tags: 
+ # - user
     
     
 - name: Domain Details
@@ -24,7 +24,7 @@
    domain_username: "{{ domain_username }}"
    domain_password: "{{ domain_password }}"
    domain_server: "{{ domain_server }}"
-   path: "{{ path }}"
+   #path: "{{ path }}"
   with_items: 
   - "{{ user_names }}"
   tags: 
