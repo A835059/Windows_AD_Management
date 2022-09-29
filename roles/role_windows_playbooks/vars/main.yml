@@ -18,14 +18,14 @@ pass: NRns@bOFJNyX
 
 user_action: present
 
-domain_username: DOMAIN\admin-account
+domain_username: VirtualAD.com
 
 domain_server: 192.168.90.94
 
 domain_password: W3lcome2022@08
 
 #path: ou=Users,dc=VirtualAD,dc=com
-path: OU=Windows,OU=Servers,DC=VirtualAD,DC=Com
+path: OU=Windows,OU=Servers,DC=VirtualAD,DC=com
 
 
 #absent, paused, started, stopped, restarted   #Service actions
