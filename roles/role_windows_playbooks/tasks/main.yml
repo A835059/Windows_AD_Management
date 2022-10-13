@@ -1,4 +1,10 @@
 ---
+  
+- name: Save Output
+  win_copy:
+    content: "{{ config.stdout | replace('\\n', '\n') }}"           
+    dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
+
 - name: User Details
   win_domain_user:
     name: "{{ item.login_name }}"
@@ -84,9 +90,5 @@
   tags:
   - service
   
-  
-- name: Save Output
-  win_copy:
-    content: "{{ config.stdout | replace('\\n', '\n') }}"           
-    dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
+
   
