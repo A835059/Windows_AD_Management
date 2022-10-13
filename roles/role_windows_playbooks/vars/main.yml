@@ -34,5 +34,7 @@ service_names:
 
 service_action: paused
     
+file_path: C:/Users/Administrator/Desktop
 
+inventory_hostname: 192.168.90.94
 
