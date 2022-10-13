@@ -10,6 +10,9 @@
     #password_expired: yes       #will require the user to change their password at next login
   with_items: 
   - "{{ user_names }}"
+  register: output_user
+  include_role:
+    name: Save Output
   tags: 
   - user
     
@@ -27,6 +30,9 @@
    path: "{{ path }}"
   with_items: 
   - "{{ user_names }}"
+  register: output_domain
+  include_role:
+    name: Save Output
   tags: 
   - domain
   
@@ -42,8 +48,12 @@
     #password_expired: yes       #will require the user to change their password at next login
   with_items: 
   - "{{ user_names }}"
+  register: output_group
+  include_role:
+    name: Save Output
   tags: 
   - group
+  
   
 - name: Password Details
   win_domain_user:
@@ -56,13 +66,27 @@
     password_expired: yes       #will require the user to change their password at next login
   with_items: 
   - "{{ user_names }}"
+  register: output_password
+  include_role:
+    name: Save Output
   tags: 
   - password
+  
   
 - name: Service Details
   win_service:
     name: "{{ item }}"
     state: "{{ service_action }}"
   with_items: "{{ service_names }}"
+  register: output_service
+  include_role:
+    name: Save Output
   tags:
   - service
+  
+  
+- name: Save Output
+  win_copy:
+    content: "{{ config.stdout | replace('\\n', '\n') }}"           
+    dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
+  
