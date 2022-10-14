@@ -1,9 +1,4 @@
 ---
-  
-- name: Save Output
-  win_copy:
-    content: "{{ config.stdout | replace('\\n', '\n') }}"           
-    dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
 
 - name: User Details
   win_domain_user:
@@ -17,11 +12,15 @@
   with_items: 
   - "{{ user_names }}"
   register: output_user
-  include_role:
-    name: Save Output
+  - name: Save Output
+  win_copy:
+    content: "{{ config.stdout | replace('\\n', '\n') }}"           
+    dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
   tags: 
   - user
     
+    
+
     
 - name: Domain Details
   win_domain_user:
