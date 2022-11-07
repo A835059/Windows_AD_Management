@@ -8,16 +8,16 @@
     password: "{{ pass }}"
     state: "{{ user_action }}"
     #groups: "{{ group_names }}"
-    #password_expired: yes       #will require the user to change their password at next login
+    password_expired: yes       #will require the user to change their password at next login
   with_items: 
-  - "{{ user_names }}"
+    - "{{ user_names }}"
 #  register: output_user
 #- name: Save Output
  # win_copy:
   #  content: "{{ config.stdout | replace('\\n', '\n') }}"           
    # dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
   tags: 
-  - user
+    - user
     
     
 
@@ -29,15 +29,15 @@
    surname: "{{ item.last_name }}"
    password: "{{ pass }}"
    state: "{{ user_action }}"
-   domain_username: "{{ domain_username }}"
-   domain_password: "{{ domain_password }}"
-   domain_server: "{{ domain_server }}"
+   #domain_username: "{{ domain_username }}"
+   #domain_password: "{{ domain_password }}"
+   #domain_server: "{{ domain_server }}"
    path: "{{ path }}"
   with_items: 
-  - "{{ user_names }}"
+    - "{{ user_names }}"
   #register: output_domain
   tags: 
-  - domain
+    - OU
   
   
 - name: Group Details
@@ -50,26 +50,23 @@
     groups: "{{ group_names }}"
     #password_expired: yes       #will require the user to change their password at next login
   with_items: 
-  - "{{ user_names }}"
+    - "{{ user_names }}"
   #register: output_group
   tags: 
-  - group
+    - group
   
   
-- name: Password Details
+- name: Password Details #enable disable user
   win_domain_user:
     name: "{{ item.login_name }}"
     firstname: "{{ item.first_name }}"
     surname: "{{ item.last_name }}"
-    password: "{{ pass }}"
-    state: "{{ user_action }}"
-    #groups: "{{ group_names }}"
-    password_expired: yes       #will require the user to change their password at next login
+    account_locked: "{{ account_lock }}"
   with_items: 
-  - "{{ user_names }}"
+    - "{{ user_names }}"
   #register: output_password
   tags: 
-  - password
+    - account_lock
   
   
 - name: Service Details
@@ -79,7 +76,7 @@
   with_items: "{{ service_names }}"
   #register: output_service
   tags:
-  - service
+    - service
   
 
   
