@@ -12,7 +12,7 @@
   with_items: 
   - "{{ user_names }}"
   register: output_user
-  - name: Save Output
+- name: Save Output
   win_copy:
     content: "{{ config.stdout | replace('\\n', '\n') }}"           
     dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
