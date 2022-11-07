@@ -14,18 +14,19 @@ user_names:
 group_names: 
     - Domain Guests
    
-pass: NRns@bOFJNyX
+pass: Welcome@2022
 
 user_action: present
 
-domain_username: VirtualAD\Administrator
+#domain_username: VirtualAD\Administrator
 
-domain_server: 192.168.90.94
+#domain_server: 192.168.90.94
 
-domain_password: W3lcome2022@08
+#domain_password: W3lcome2022@08
 
 path: ou=Users,dc=VirtualAD,dc=com
 
+account_lock: yes
 
 #absent, paused, started, stopped, restarted   #Service actions
 service_names:
@@ -34,7 +35,7 @@ service_names:
 
 service_action: paused
     
-file_path: C:/Users/Administrator/Desktop
+#file_path: C:/Users/Administrator/Desktop
 
-inventory_hostname: 192.168.90.94
+#inventory_hostname: 192.168.90.94
 
