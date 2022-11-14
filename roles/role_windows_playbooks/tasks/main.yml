@@ -1,82 +1,56 @@
 ---
 
-- name: User Details
+- name: User Creation
   win_domain_user:
     name: "{{ item.login_name }}"
     firstname: "{{ item.first_name }}"
     surname: "{{ item.last_name }}"
     password: "{{ pass }}"
     state: "{{ user_action }}"
-    #groups: "{{ group_names }}"
-    password_expired: yes       #will require the user to change their password at next login
-  with_items: 
+    password_expired: yes
+  with_items:
     - "{{ user_names }}"
-#  register: output_user
-#- name: Save Output
- # win_copy:
-  #  content: "{{ config.stdout | replace('\\n', '\n') }}"           
-   # dest: "{{ file_path }}/{{ inventory_hostname }}.csv"
-  tags: 
-    - user
-    
-    
-
-    
-- name: Domain Details
-  win_domain_user:
-   name: "{{ item.login_name }}"
-   firstname: "{{ item.first_name }}"
-   surname: "{{ item.last_name }}"
-   password: "{{ pass }}"
-   state: "{{ user_action }}"
-   #domain_username: "{{ domain_username }}"
-   #domain_password: "{{ domain_password }}"
-   #domain_server: "{{ domain_server }}"
-   path: "{{ path }}"
-  with_items: 
-    - "{{ user_names }}"
-  #register: output_domain
-  tags: 
-    - OU
-  
-  
-- name: Group Details
-  win_domain_user:
-    name: "{{ item.login_name }}"
-    firstname: "{{ item.first_name }}"
-    surname: "{{ item.last_name }}"
-    #password: "{{ pass }}"
-    state: "{{ user_action }}"
-    groups: "{{ group_names }}"
-    #password_expired: yes       #will require the user to change their password at next login
-  with_items: 
-    - "{{ user_names }}"
-  #register: output_group
-  tags: 
-    - group
-  
-  
-- name: Password Details #enable disable user
-  win_domain_user:
-    name: "{{ item.login_name }}"
-    firstname: "{{ item.first_name }}"
-    surname: "{{ item.last_name }}"
-    account_locked: "{{ account_lock }}"
-  with_items: 
-    - "{{ user_names }}"
-  #register: output_password
-  tags: 
-    - account_lock
-  
-  
-- name: Service Details
-  win_service:
-    name: "{{ item }}"
-    state: "{{ service_action }}"
-  with_items: "{{ service_names }}"
-  #register: output_service
   tags:
-    - service
-  
+    - user
 
-  
+
+- name: Adding user to OU
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    state: "{{ user_action }}"
+    path: "{{ path }}"
+  with_items:
+    - "{{ user_names }}"
+  tags:
+    - OU
+
+- block:
+
+    - name: Group Creation
+      win_domain_group:
+        name: "{{ group_name }}"
+        scope: "{{ scope_name }}"
+        state: present
+
+    - name: Adding user in group
+      win_domain_group_membership:
+        name: "{{ group_name }}"
+        members: "{{ item['login_name'] }}"
+        state: present
+      loop: "{{ user_names }}"
+  tags:
+    - group
+
+- name: Enable Disable User
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    enabled: "{{ account_lock }}"
+  with_items:
+    - "{{ user_names }}"
+  tags:
+    - account_lock
+
