@@ -1,1 +1,34 @@
+---
+# vars file for windows_playbook
+
+# absent,present,query   #User state
+user_names:
+    - login_name: testuser2022
+      first_name: Bob
+      last_name: John A
+
+    - login_name: testuser2021
+      first_name: Vic
+      last_name: Smith A
+
+#Define default password to be set for all users from above user_names list
+pass: Password@12345
+
+###############################################
+# Define OU details below to add users from above user_names list
+path: ou=Test_User,dc=VirtualAD,dc=com
+###############################################
+
+#Define group name and scope name to which you want to add users from above user_names list
+group_name: test_group1
+scope_name: universal
+
+###########################################
+# Defind action to be taken for all users from above user_names list
+user_action: present
+
+###########################################
+# Define below value to "yes" if you want to enable the user account from above user_names list and vice versa
+account_lock: yes
+
 
