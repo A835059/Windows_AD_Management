@@ -1,1 +1,56 @@
+---
+
+- name: User Creation
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    password: "{{ pass }}"
+    state: "{{ user_action }}"
+    password_expired: yes
+  with_items:
+    - "{{ user_names }}"
+  tags:
+    - user
+
+
+- name: Adding user to OU
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    state: "{{ user_action }}"
+    path: "{{ path }}"
+  with_items:
+    - "{{ user_names }}"
+  tags:
+    - OU
+
+- block:
+
+    - name: Group Creation
+      win_domain_group:
+        name: "{{ group_name }}"
+        scope: "{{ scope_name }}"
+        state: present
+
+    - name: Adding user in group
+      win_domain_group_membership:
+        name: "{{ group_name }}"
+        members: "{{ item['login_name'] }}"
+        state: present
+      loop: "{{ user_names }}"
+  tags:
+    - group
+
+- name: Enable Disable User
+  win_domain_user:
+    name: "{{ item.login_name }}"
+    firstname: "{{ item.first_name }}"
+    surname: "{{ item.last_name }}"
+    enabled: "{{ account_lock }}"
+  with_items:
+    - "{{ user_names }}"
+  tags:
+    - account_lock
 
