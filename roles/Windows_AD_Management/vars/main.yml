@@ -1,7 +1,6 @@
 ---
-# vars file for windows_playbook
+# vars file for Windows_AD_Management
 
-# absent,present,query   #User state
 user_names:
     - login_name: testuser2022
       first_name: Bob
@@ -24,7 +23,8 @@ group_name: test_group1
 scope_name: universal
 
 ###########################################
-# Defind action to be taken for all users from above user_names list
+# Define action to be taken for all users from above user_names list
+# absent,present,query   #User state
 user_action: present
 
 ###########################################
